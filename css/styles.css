@@ -53,7 +53,24 @@ section {
 
 /* footer */
 footer {
-  padding: 20px;
-  background-color: lightgrey;
+  padding: 17px 30px;
   text-align: center;
+  background-color: lightgrey;
+}
+
+/* Page 6 */
+.page6 {
+  background-color: transparent;
+  margin: 30px;
+  padding: 0;
+  width: auto;
+  color: white;
+}
+
+.page6 > p {
+  font-size: 30px;
+}
+
+.page6 > video {
+  margin: 20px;
 }

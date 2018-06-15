@@ -1,0 +1,59 @@
+/* body */
+body {
+  width: 960px;
+  margin: auto;
+  background-color: rgb(26, 26, 26);
+}
+
+body * {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+/* header */
+header {
+  height: 100px;
+  margin: 30px 0 25px;
+}
+
+header > img {
+  height: 100px;
+  width: auto;
+}
+
+/* nav */
+nav {
+  height: 54px;
+  background-color: lightgrey;
+
+  display: flex;
+}
+
+nav > a {
+  border-right: 1px solid silver;
+  padding: 21px 30px 19px;
+  text-decoration: none;
+  color: black;
+
+  flex-direction: row;
+}
+
+nav > a:hover {
+  background-color: white;
+  color: darkred;
+}
+
+/* section */
+section {
+  width: 900px;
+  padding: 30px;
+  margin: 20px 0px;
+  background-color: lightgrey;
+}
+
+/* footer */
+footer {
+  padding: 20px;
+  background-color: lightgrey;
+  text-align: center;
+}

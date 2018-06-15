@@ -1,5 +1,36 @@
 <!DOCTYPE html>
 <html>
+
+<!-- 拖拉用的css-->
+<style type="text/css">
+#Box2,#Box3,#Box4{
+    width:200px;
+    height:100px;
+    padding:10px;
+    border:3px #000088 dashed;
+    float:left;
+    margin-right:10px;
+}
+</style>
+
+<!-- 拖拉用的script start-->
+	<script type="text/javascript">
+	function AllowDrop(event){
+		event.preventDefault();
+	}
+	function Drag(event){
+		event.dataTransfer.setData("text",event.currentTarget.id);
+	}
+	function Drop(event){
+		event.preventDefault();
+		var data=event.dataTransfer.getData("text");
+		event.currentTarget.appendChild(document.getElementById(data));
+	}
+	</script>
+
+<!-- 拖拉用的script end-->
+</script>
+
 <head>
   <meta charset="utf-8">
   <title>ITC 6355 - Team 1</title>
@@ -28,8 +59,173 @@
 
   <!-- Main Content -->
   <section>
-    <!-- Put Your Code Here -->
-    Section
+    <!-- 姚暄的練習 start-->
+	<h2>Calender Table Practice - JavaScript & HTML Practice</h2>
+	<script type="text/javascript">
+		//姚暄的練習
+			var my = new Date();
+
+            function showc() {
+             var k=1;
+             var j=1;
+             var today;
+             var tomonth;
+             var theday=1;//
+             var max;
+             var temp;
+             var tempday;//
+             document.write ("<b>" + my.getFullYear() + "-" + (my.getMonth()+1) + "</b>");
+             document.write ("<table border='1' width='273' height='158'>");
+             document.write ("<tr>");
+             document.write ("<td height='23' width='39'><font color='red'>Sun</font></td>");
+             document.write ("<td height='23' width='39'>Mon</td>");
+             document.write ("<td height='23' width='39'>Tue</td>");
+             document.write ("<td height='23' width='39'>Wed</td>");
+             document.write ("<td height='23' width='39'>Thu</td>");
+             document.write ("<td height='23' width='39'>Fri</td>");
+             document.write ("<td height='23' width='39'>Sat</td>");
+             document.write ("</tr>");
+             temp=my.getDate();
+             my.setDate(1);
+             //document.write (my.getDate());
+             tempday=my.getDay();//
+             my.setDate(temp);
+             today=my.getDay();//
+
+             switch ((my.getMonth()+1)) {
+              case 1:
+              case 3:
+              case 5:
+              case 7:
+              case 8:
+              case 10:
+              case 12:
+               max=31;
+               break;
+              case 4:
+              case 6:
+              case 9:
+              case 11:
+               max=30;
+               break;
+              default:
+               max=29;//
+              //document.write (max);
+             }
+             for(k=0;k<6;k++) {
+              document.write ("<tr>");
+              for(j=0;j<=6;j++) {
+               document.write ("<td height='23' width='39'>");
+               if(j>=(tempday)) {
+                tempday=0;//
+                if(theday<=max) {
+                 document.write ("<a title=" + my.getFullYear() + "-" + (my.getMonth()+1) + "-" +theday + " target='_blank' href=detail.asp?date=" + theday + ">");
+                 if(theday==my.getDate())
+                  document.write ("<font color='green'>[" + theday + "]</font></a>");
+                  else if(j==0)
+                  document.write ("<font color='red'>" + theday + "</font></a>");
+                 else
+                  document.write (theday + "</a>");
+                 theday++;
+                }
+               }
+               document.write ("</td>");
+              }
+              document.write ("</tr>");
+             }
+             document.write ("</table>");
+            }
+
+            showc();
+		</script>
+		<hr /> <!-- this is -->
+		<!-- 姚暄的練習 end-->
+
+		<!-- Danny的練習 start-->
+
+		<!--Change Language Practice start-->
+		<h2 id = "head1">Change Language Practice - JavaScript Practice</h2>
+		<script>
+			function enFunction() {
+				document.getElementById("head1").innerHTML = "Change Language Practice - JavaScript Practice";
+				document.getElementById("theWord").innerHTML = "Experience: The push that drives us For more than 100 years, Northeastern has been driven by a simple truth: Experience deepens learning like nothing else can. Today, that truth has never been more relevant. Experience propels you beyond the confines of one discipline, campus, or degree to a lifetime of growth, learning, and knowledge creation, anytime, anywhere.";
+
+			}
+
+			function cnFunction() {
+				document.getElementById("head1").innerHTML = "轉換中文練習 - JavaScript Practice";
+				document.getElementById("theWord").innerHTML = "經驗：驅動我們的推動力100多年來，東北部被一個簡單的事實所驅使：經驗加深了學習，沒有其他任何東西可以。 今天，這個事實從來就沒有那麼重要。 經驗可以使您在任何時間，任何地點超越一門學科，校園或學位的界限，進入一生的成長，學習和知識創造。";
+
+			}
+
+			function ruFunction() {
+				document.getElementById("head1").innerHTML = "Изменение языковой практики - JavaScript Practice";
+				document.getElementById("theWord").innerHTML = "Опыт: толчок, который нас ведетНа протяжении более 100 лет Северо-Восточный был продиктован простой истиной: Опыт углубляет обучение, как ничто другое. Сегодня эта истина никогда не была более актуальной. Опыт продвигает вас за пределы одной дисциплины, университетского городка или степени до жизни роста, обучения и создания знаний в любое время и в любом месте.";
+
+
+			}
+
+
+			</script>
+
+
+
+
+			<p id="theWord">Experience: The push that drives us For more than 100 years, Northeastern has been driven by a simple truth: Experience deepens learning like nothing else can. Today, that truth has never been more relevant. Experience propels you beyond the confines of one discipline, campus, or degree to a lifetime of growth, learning, and knowledge creation, anytime, anywhere.</p>
+
+
+
+			<button type="button" onclick="enFunction()">English</button>
+			<button type="button" onclick="cnFunction()">Chinese</button>
+			<button type="button" onclick="ruFunction()">Russian</button>
+
+		<!--Change Language Practice end-->
+		<hr /> <!-- 分隔線 -->
+
+		<!--Google map Practice start-->
+		<!-- Begin Container -->
+			<div id="container" class="opacity">
+				<h2>Google map Practice</h2>
+				<p></p>
+
+				<!-- Begin Portfolio -->
+				<div id="portfolio">
+				<div class="sidebar-box">
+				<h4>Where are We?</h4>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4231.373099136917!2d-71.09269916032854!3d42.33961359130672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a1999cf5ce1%3A0xc97b00e66522b98c!2sNortheastern+University!5e0!3m2!1sen!2sus!4v1528488444703" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				<div class="clear"></div>
+
+				<!-- .wrap -->
+				</div>
+				<!-- End Portfolio -->
+
+				<div class="clear"></div>
+				<div id="footer">
+			  <div class="footer-top"></div>
+			  <!-- Divider -->
+
+
+
+
+			  <div class="clear"></div>
+				</div>
+			</div>
+			<!--Google map Practice end-->
+		<hr /> <!-- 分隔線 -->
+
+
+		<!--Drag and Drop Practice start-->
+		<h2 id = "head1">Drag and Drop Practice - JavaScript & CSS Practice</h2>
+		<div id="Box2" ondrop="Drop(event)" ondragover="AllowDrop(event)">
+			<img id="Img2" src="images/DragMe.png" draggable="true" ondragstart="Drag(event)">
+		</div>
+		<div id="Box3" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+		<div id="Box4" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+		<div style="clear:both;"></div>
+		<!--Drag and Drop Practice end-->
+		<!-- Danny的練習 end-->
+
   </section>
 
   <!-- Footer -->

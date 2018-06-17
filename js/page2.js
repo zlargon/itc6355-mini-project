@@ -21,6 +21,8 @@ myCanvas.addEventListener('mousemove', e => {
 
     ctx.beginPath();
     ctx.strokeStyle = color;
+    ctx.lineWidth = 9;
+    ctx.lineJoin = 'round';
     ctx.moveTo(lastX, lastY);
     ctx.lineTo(x, y);
     ctx.closePath();

@@ -6,8 +6,13 @@
   <link rel="shortcut icon" type="image/x-icon" href="./images/logo_icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- JS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  <script type="text/javascript" src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script>
+
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <link rel="stylesheet" type="text/css" href="./css/page2.css">
 </head>
 <body>
   <!-- Header -->
@@ -27,14 +32,40 @@
   </nav>
 
   <!-- Main Content -->
-  <section>
-    <!-- Put Your Code Here -->
-    Section
+  <section class="page2">
+    <h1>Painting Board</h1>
+    <canvas id="myCanvas" width="900" height="400"></canvas>
+
+    <!-- colors -->
+    <form>
+      <input type="radio" name="color" value="black" checked>
+      <span style="background-color: black;"></span><br>
+
+      <input type="radio" name="color" value="blue">
+      <span style="background-color: blue;"></span><br>
+
+      <input type="radio" name="color" value="red">
+      <span style="background-color: red;"></span><br>
+
+      <input type="radio" name="color" value="green">
+      <span style="background-color: green;"></span><br>
+
+      <input type="radio" name="color" value="yellow">
+      <span style="background-color: yellow;"></span><br>
+    </form>
+
+    <!-- clear button -->
+    <button type="button" onclick="clearCanvas()">Clear</button>
+
+    <!-- download button -->
+    <button type="button" onclick="downloadCanvas()">Download Image</button>
   </section>
 
   <!-- Footer -->
   <footer>
     © 2018 ITC 6355 - Team 1
   </footer>
+
+  <script type="text/javascript" src="./js/page2.js"></script>
 </body>
 </html>

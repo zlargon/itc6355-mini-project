@@ -1,0 +1,14 @@
+#myCanvas {
+  background-color: white;
+}
+
+.page2 span {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.page2 button {
+  margin: 15px 10px 0 0;
+}

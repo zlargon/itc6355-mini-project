@@ -1,0 +1,10 @@
+/* change the transparent of the page 4 section background color */
+.page4_section {
+  background-color: transparent;
+}
+
+/*set the theme width and height*/
+#element {
+  width: 100%;
+  height: 100vh;
+}

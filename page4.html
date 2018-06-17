@@ -2,12 +2,17 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ITC 6355 - Team 1</title>
+  <title>ITC 6355 - Team 1 - Page4</title>
   <link rel="shortcut icon" type="image/x-icon" href="./images/logo_icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <link rel="stylesheet" type="text/css" href="./css/page4.css">
+
+  <!-- import jquery3.3.1 and third party library quietflow.js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="js/quietflow.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -28,14 +33,32 @@
   </nav>
 
   <!-- Main Content -->
-  <section>
-    <!-- Put Your Code Here -->
-    Section
+  <section class="page4_section">
+      <!-- background animation -->
+      <div id="element"></div>
   </section>
 
   <!-- Footer -->
   <footer>
     © 2018 ITC 6355 - Team 1
   </footer>
+
+  <!-- javascript function -->
+  <script type="text/javascript">
+
+    $("body").quietflow({
+      theme : "floatingBoxes",
+      specificColors : [
+        "rgba(46,  204, 113, .5)",
+        "rgba(52,  152, 219, .5)",
+        "rgba(231,  76,  60, .5)",
+        "rgba(155,  89, 182, .5)",
+        "rgba(241, 196,  15, .5)"
+      ],
+      boxCount : 300,
+      backgroundCol : "#34495E"
+    });
+
+  </script>
 </body>
 </html>

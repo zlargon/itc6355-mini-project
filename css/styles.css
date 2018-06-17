@@ -57,25 +57,3 @@ footer {
   text-align: center;
   background-color: lightgrey;
 }
-
-/* Page 1 */
-.page1 > a {
-  padding: 19px 30px 17px;
-}
-
-/* Page 6 */
-.page6 {
-  background-color: transparent;
-  margin: 30px;
-  padding: 0;
-  width: auto;
-  color: white;
-}
-
-.page6 > p {
-  font-size: 30px;
-}
-
-.page6 > video {
-  margin: 20px;
-}

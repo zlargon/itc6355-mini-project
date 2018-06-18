@@ -37,16 +37,7 @@ function clearCanvas () {
 }
 
 function downloadCanvas () {
-  html2canvas(myCanvas, {
-    background: 'white',
-    onrendered: function (canvas) {
-      const imgData = canvas.toDataURL('image/jpeg');
-
-      fetch(imgData)
-        .then(res => res.blob())
-        .then(blob => {
-          saveAs(blob, "image.jpg");
-        })
-    }
-  });
+  myCanvas.toBlob(blob => {
+    FileSaver.saveAs(blob, 'image.png');
+  }, 'image/png');
 }

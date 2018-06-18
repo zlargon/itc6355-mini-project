@@ -13,14 +13,12 @@ myCanvas.addEventListener('mousedown', e => {
 
 myCanvas.addEventListener('mousemove', e => {
   if (isMouseDown) {
-    const ctx = myCanvas.getContext('2d');
-    const color = document.querySelector('input[name="color"]:checked').value;
-
     const x = e.pageX - myCanvas.offsetLeft;
     const y = e.pageY - myCanvas.offsetTop;
 
+    const ctx = myCanvas.getContext('2d');
     ctx.beginPath();
-    ctx.strokeStyle = color;
+    ctx.strokeStyle = document.querySelector('input:checked').id; // color
     ctx.lineWidth = 9;
     ctx.lineJoin = 'round';
     ctx.moveTo(lastX, lastY);

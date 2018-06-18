@@ -2,6 +2,7 @@ button {
   margin: 50px 10px 0 0;
 }
 
+/* hide the original radio button */
 input {
   display: none;
 }
@@ -13,6 +14,7 @@ label {
   cursor: pointer;
 }
 
+/* white circle */
 label:before {
   content: '';
   position: absolute;
@@ -22,9 +24,10 @@ label:before {
   height: 30px;
   border: 2px solid darkgrey;
   border-radius: 100%;
-  background: #fff;
+  background: white;
 }
 
+/* small colorful circle on the white circle */
 label:after {
   content: '';
   width: 24px;
@@ -36,27 +39,39 @@ label:after {
   transition: all 0.2s ease;
 }
 
+/* hide spot when label is unchecked */
 input:not(:checked) + label:after {
   opacity: 0;
   transform: scale(0);
 }
 
+/* show colorful spot when label is checked */
 input:checked + label:after {
   opacity: 1;
   transform: scale(1);
 }
 
-.black:after         { background:   black;  }
-.black:hover:before  { border-color: black;  }
+/* show translucent, colorful spot when mouse over the unchecked label */
+input:not(:checked) + label:hover:after {
+  opacity: 0.5;
+  transform: scale(1);
+}
 
-.blue:after          { background:   blue;   }
-.blue:hover:before   { border-color: blue;   }
+/* black, blue, red, green, brown, yellow color styles */
+.black:after  { background:   black; }
+.black:before { border-color: black; }
 
-.red:after           { background:   red;    }
-.red:hover:before    { border-color: red;    }
+.blue:after   { background:   blue;  }
+.blue:before  { border-color: blue;  }
 
-.green:after         { background:   green;  }
-.green:hover:before  { border-color: green;  }
+.red:after    { background:   red;   }
+.red:before   { border-color: red;   }
 
-.yellow:after        { background:   yellow; }
-.yellow:hover:before { border-color: yellow; }
+.green:after  { background:   green; }
+.green:before { border-color: green; }
+
+.brown:after  { background:   brown; }
+.brown:before { border-color: brown; }
+
+.yellow:after  { background:   yellow; }
+.yellow:before { border-color: yellow; }

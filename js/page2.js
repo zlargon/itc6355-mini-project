@@ -2,20 +2,14 @@ const myCanvas = document.getElementById('myCanvas')
 let isMouseDown = false;
 let lastX, lastY;
 
-myCanvas.addEventListener('mouseup', () => { isMouseDown = false });
+myCanvas.addEventListener('mouseup',    () => { isMouseDown = false });
 myCanvas.addEventListener('mouseleave', () => { isMouseDown = false });
+myCanvas.addEventListener('mousedown',  () => { isMouseDown = true  });
+myCanvas.addEventListener('mousemove',   e => {
+  const x = e.pageX - myCanvas.offsetLeft;
+  const y = e.pageY - myCanvas.offsetTop;
 
-myCanvas.addEventListener('mousedown', e => {
-  isMouseDown = true;
-  lastX = e.pageX - myCanvas.offsetLeft;
-  lastY = e.pageY - myCanvas.offsetTop;
-});
-
-myCanvas.addEventListener('mousemove', e => {
   if (isMouseDown) {
-    const x = e.pageX - myCanvas.offsetLeft;
-    const y = e.pageY - myCanvas.offsetTop;
-
     const ctx = myCanvas.getContext('2d');
     ctx.beginPath();
     ctx.strokeStyle = document.querySelector('input:checked').id; // color
@@ -25,10 +19,10 @@ myCanvas.addEventListener('mousemove', e => {
     ctx.lineTo(x, y);
     ctx.closePath();
     ctx.stroke();
-
-    lastX = x;
-    lastY = y;
   }
+
+  lastX = x;
+  lastY = y;
 });
 
 function clearCanvas () {

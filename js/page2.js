@@ -33,7 +33,8 @@ myCanvas.addEventListener('mousemove', e => {
 
 function clearCanvas () {
   const ctx = myCanvas.getContext('2d');
-  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
 
 function downloadCanvas () {

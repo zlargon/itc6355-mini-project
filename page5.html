@@ -8,6 +8,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <link rel="stylesheet" type="text/css" href="./css/page5.css">
 </head>
 <body>
   <!-- Header -->
@@ -29,8 +30,48 @@
 
   <!-- Main Content -->
   <section>
-    <!-- Put Your Code Here -->
-    Section
+    <!-- Username -->
+    <div class="username">
+      <form action="#" method="post" name="usernameform">
+        <ul>
+          <li>
+            <label>Username :</label>
+            <input type="text" name="yourusername" placeholder="Username"/>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <!-- gender -->
+    <div class="usergender">
+      <form action="#" method="post" name="usergenderform">
+       <dl>
+         <dt>Gender :</dt>
+         <dd ><input type="radio" name="gender" id="male" checked="checked" />
+           <a href="#"><label for="male">Male</label></a>
+         </dd>
+         <dd><input type="radio" name="gender" id="female"/>
+           <a href="#"><label for="female">Female</label></a>
+         </dd>
+       </dl>
+      </form>
+    </div>
+
+    <!-- interests -->
+    <div class="interests">
+      <form action="#" method="post" name="userinterests">
+        <dl>
+          <dt>Interests :</dt>
+          <dd class="selected"><input type="checkbox" name="userinterests" id="photography" />
+            <label for="photography">Photography</label>
+          </dd>
+          <dd><input type="checkbox" name="userinterests" id="shopping"/>
+            <label for="shopping">Shopping</label>
+          </dd>
+           <dd><input type="checkbox" name="userinterests" id="fitness"/>
+            <label for="fitness">Fitness</label>
+          </dd>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->

@@ -1,0 +1,44 @@
+/* clean style */
+ul {list-style: none; }
+div, dl, dt, dd, ul, ol, li{padding: 0; margin: 0;}
+/* username */
+.username *:focus{outline:none;}
+.username{width: 600px;height:auto;margin:5px auto;padding:10px;}
+.username ul{width: 600px;}
+.username ul li label {width:120px; display:inline-block;float: left;padding:5px;text-align: right;}
+.username ul li input{width:300px;height:20px; border:1px solid #AAAAAA; margin: 3px;border-radius:15px; padding:3px 10px;}
+.username ul li input:focus{border-color:#C00;}
+
+
+/*gender */
+a{color: #000000;text-decoration:none;}
+.usergender{
+	width: 600px;
+	height: 32px;
+	margin: 5px auto;
+}
+
+.usergender dl{
+	height:32px; line-height: 32px;
+}
+
+.usergender dt{
+	width: 120px;
+	float: left;
+	padding:0 5px;
+	text-align: right;
+}
+
+.usergender dd{
+	float: left;
+	margin: 0 10px 0 8px;
+}
+
+.usergender dd a:hover{
+	background-color: #ABABAB;
+}
+/* interests*/
+.interests{width: 600px; height: 30px; margin:15px auto;}
+.interests dl{height:30px; line-height: 30px;}
+.interests dt{width: 120px;float: left;padding: 0 5px; text-align: right;}
+.interests dd{float: left; margin: 0 10px 0 8px;position: relative;}
